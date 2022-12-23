@@ -72,3 +72,37 @@ public class MyClass {
       System.out.print(countOccuerence(str,word));
     }
 }
+
+Q. 3 
+Check if a string is substring of another
+Input: S1 = “for”, S2= “geeksforgeeks”
+Output: 5
+Explanation: String “for” is present as a substring of s2.
+
+#Program:
+public class MyClass {
+    static boolean checkSubString(String s1, String s2)
+    {
+        int M = s1.length();
+        int N = s2.length();
+        
+        for(int i=0;i<=N-M;i++){
+            int j;
+            for(j=0;j<M;j++){
+                if(s2.charAt(i+j) != s1.charAt(j)){
+                    break;
+                }
+            }
+            if(j == M){
+                return true;
+            }
+        }
+        return false;
+    }
+    public static void main(String args[]) {
+        String s1 = "geeks";
+        String s2 = "Geeks for geeks A computer science portal for geeks ";
+        boolean A = checkSubString(s1,s2);
+        System.out.print(A+" ");
+    }
+}
