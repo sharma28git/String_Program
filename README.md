@@ -47,3 +47,28 @@ public class MyClass {
         System.out.print(mostWordsFound(str));
     }
 }
+
+Q. 2
+Count occurrences of a word in string
+
+#Program
+
+public class MyClass {
+    static int countOccuerence(String str, String word)
+    {
+        String [] a = str.split(" ");
+        
+        int count=0;
+        for(int i=0;i<a.length;i++){
+            if(word.equals(a[i])){
+                count++;
+            }
+        }
+        return count;
+    }
+    public static void main(String args[]) {
+      String str = "Geeks for geeks A computer science portal for geeks ";
+      String word = "geeks";
+      System.out.print(countOccuerence(str,word));
+    }
+}
